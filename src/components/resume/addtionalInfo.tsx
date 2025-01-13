@@ -8,10 +8,10 @@ export const AdditionalInfoItem: React.FC<AdditionalInfoItemProps> = ({
     languages
 }) => (
     <div className="space-y-1">
-        <p className="">
+        <p className="text-sm">
             <strong>Certificates:</strong> {certificates.join(', ')}
         </p>
-        <p className="">
+        <p className="text-sm">
             <strong>Languages:</strong> {languages.join(', ')}
         </p>
     </div>

@@ -1,162 +1,157 @@
-import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Image from 'next/image';
-
-import { Separator } from "@/components/ui/separator";
-import { AdditionalInfoItem } from './addtionalInfo';
 import { TechItem } from './tech';
+import { Separator } from "@/components/ui/separator";
 import { EducationItem } from './education';
-import { ExperienceItem } from './experience';
 import { ContactHeader } from './contactHeader';
+import { ExperienceItem } from './experience';
+import { Card, CardContent } from "@/components/ui/card";
+import { AdditionalInfoItem } from './addtionalInfo';
+import React from 'react';
+import '@/styles/print.css';
+
+
+// TODO: Make sure links work in pdf version
 
 export default function ResumePage() {
   return (
-    <Card className="max-w-4xl mx-auto my-8 p-8 rounded-none">
-      <ContactHeader
-        name="Faisal Owimer"
-        location="Manhattan, NY"
-        phone="857-756-5572"
-        email="faisal@owimer.co"
-        linkedinUrl="https://www.linkedin.com/in/faisal-owimer/"
-        githubUrl="https://github.com/Faisalowimer"
-      />
+    <div className="print:p-0 print:m-0 w-full">
+      <Card className="max-w-[8.5in] min-h-[11in] mx-auto my-8 p-2 
+        print:w-[8.5in] print:h-[11in] print:m-0 print:p-4 print:overflow-hidden border-none shadow-none">
+        <ContactHeader
+          name="Faisal Owimer"
+          location="Manhattan, NY"
+          phone="+1-857-756-5572"
+          email="faisal@owimer.co"
+          linkedinUrl="https://www.linkedin.com/in/faisal-owimer/"
+          githubUrl="https://github.com/Faisalowimer"
+        //personalWebsiteUrl="https://owimer.com"
+        />
 
-      <CardContent className="space-y-4">
-        <section>
-          <h2 className="text-2xl font-semibold mb-2">Professional Experience</h2>
-          <Separator className="mb-4" />
+        <CardContent className="space-y-4 print:space-y-3 print:text-[11pt]">
+          <section>
+            <h2 className="text-base font-semibold mb-1 text-primary">Professional Experience</h2>
+            <Separator className="mb-2" />
 
-          <div className="space-y-4">
+            <div className="space-y-3">
+              <ExperienceItem
+                title="Founder & CEO"
+                company="Ihsan Tech, Inc."
+                companyUrl="https://www.ihsan.tech"
+                location="Manhattan, NY"
+                jobSummary="Founded a platform connecting Muslim communities with mosques, processing +$19k in donations, supporting community fundraising, events, and streamlining back-office management."
+                date="Nov 2024 – Present"
+                description={[
+                  "Designed and implemented responsive, feature-rich frontend using Next.js, ClerkAuth, React, Zustand, Shadcn, TailwindCSS, and Framer Motion, ensuring seamless user interface and experience",
+                  "Built scalable backend and database infrastructure using Docker, Redis caching, and Prisma ORM, with comprehensive RESTful API integrations (Stripe, Clerk, SendGrid, Resend, QuickBooks)",
+                ]}
+              />
 
-            <ExperienceItem
-              title="Founder & CEO"
-              company="Ihsan Tech, Inc."
-              companyUrl="https://www.ihsan.tech"
-              location="Manhattan, NY"
-              jobSummary="Developed a platform connecting Muslim communities with Mosques across the US, enabling seamless donations, efficient back-office management, and support for community events."
-              date="Dec 2023 – Present"
-              description={[
-                "Led the development and design for a secure, user-friendly platform to streamline donor engagement and manage donations efficiently",
-                "Integrated Stripe for secure payment processing, onboarded first paying user, and processed over $13k in donations"
+              <ExperienceItem
+                title="Software Engineer"
+                company="Fractal Tech"
+                companyUrl="https://fractalbootcamp.com/"
+                location="Brooklyn, NY"
+                jobSummary="Transitioned to full-stack development, building production-ready applications through intensive bootcamp training in frontend and backend technologies."
+                date="Sep 2024 – Present"
+                description={[
+                  "Developed a range of applications using TypeScript, Next.js, Vite, React, TanStack, Zod, MagicUI, Firebase, Express, OpenAI, Vercel, Netlify, and AWS",
+                  "Automated data scraping, browser workflows, and UI testing with Puppeteer, Storybook, and Vitest for data aggregation, insights, and reducing manual QA",
+                ]}
+              />
+
+              <ExperienceItem
+                title="Product Manager"
+                company="Adaptive Investment Solutions"
+                companyUrl="https://adaptive-investments.com/app/home"
+                location="Manhattan, NY"
+                jobSummary="Led product management and business development efforts to raise seed round."
+                date="Jun 2020 – May 2024"
+                description={[
+                  "Spearheaded product discovery and pilot user onboarding, increasing user traction and identifying product-market fit",
+                  "Participated in raising $750K in pre-seed and $1M in bridge funding, collaborating with founders on investor pitches",
+                  "Developed go-to-market strategy and internal workflows to streamline business operations and product launch",
+                ]}
+              />
+
+              <ExperienceItem
+                title="Business Development Manager"
+                company="Saudi Modern Factory"
+                companyUrl="https://smf.com.sa/"
+                location="Riyadh, Saudi Arabia"
+                jobSummary="Directed initiatives to increase market share, launch new products, projects, and enhance brand visibility."
+                date="Jun 2016 – Aug 2018"
+                description={[
+                  "Exceeded annual sales target by 124% (+$1.6M), acquiring 20 new clients and securing $500K in partnerships",
+                  "Implemented marketing strategies for website and product catalogs to boost brand visibility and drive sales growth",
+                  "Negotiated high-value contracts and cultivated client relationships, contributing to long-term revenue growth",
+                ]}
+              />
+            </div>
+          </section>
+
+          {/* <section>
+            <h2 className="text-xl font-semibold mb-1">Tech Stack</h2>
+            <Separator className="mb-2" />
+
+            <div className="space-y-3">
+              <TechItem
+                description={[
+                  "Core: TypeScript, React, Next.js, Node.js, PostgreSQL",
+                  "Libraries/Tools: TailwindCSS, Zustand, Prisma, Docker, Redis",
+                  "Infrastructure: AWS, CI/CD, Vercel, REST APIs"
+                ]}
+              />
+            </div>
+          </section> */}
+
+          <section>
+            <h2 className="text-base font-semibold mb-1">Education</h2>
+            <Separator className="mb-2" />
+
+            <div className="space-y-2">
+              <EducationItem
+                degree="Master of Science in Finance"
+                school="Hult International Business School"
+                location="Boston, MA"
+                date="Mar 2020"
+                gpa="3.83/4.00"
+                honors="Dean's List"
+              />
+
+              <EducationItem
+                degree="Master of Science in International Business"
+                school="Hult International Business School"
+                location="Boston, MA"
+                date="Aug 2019"
+                gpa="3.5/4.00"
+              />
+
+              <EducationItem
+                degree="Bachelor of Science in Business Administration, Finance Major "
+                school="Alfaisal University"
+                location="Riyadh, Saudi Arabia"
+                date="Jan 2016"
+                gpa="3.83/4.00"
+                honors="Dean's List"
+              />
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-semibold mb-1">Additional Information</h2>
+            <Separator className="mb-2" />
+            <AdditionalInfoItem
+              certificates={[
+                'CFA Level I',
+                'FMVA',
+              ]}
+              languages={[
+                'English (Fluent)',
+                'Arabic (Native)'
               ]}
             />
-
-            <ExperienceItem
-              title="Full stack Developer"
-              company="Fractal Tech"
-              companyUrl="https://fractalbootcamp.com/"
-              location="Brooklyn, NY"
-              jobSummary="Built multiple full-stack applications. "
-              date="Sep 2024 – Dec 2024"
-              description={[
-                "Developed a range of full stack applications using React, TypeScript, TailwindCSS, Storybook, Clerk, Web Sockets, Express, Prisma, & PostgreSQL with CRUD functionality and user authentication",
-                "Ongoing projects include Survey App, Movie App, Discord Chatbot, Battleship game, Custom Go scripting for automated project setup, web scraping, & personal website"
-              ]}
-            />
-
-            <ExperienceItem
-              title="Operations & Strategy"
-              company="Adaptive Investment Solutions"
-              companyUrl="https://adaptive-investments.com/app/home"
-              location="Manhattan, NY"
-              jobSummary="Led business development efforts to launch Beta and raise Seed Round."
-              date="Jun 2020 – May 2024"
-              description={[
-                "Led product launch for public tools to increase user traction, managed feature & product rollouts, conducted user product discovery to onboard pilot users and identify product-market fit",
-                "Participated in fundraising and prepared pitch deck, raising $150K in convertible notes for the pre-seed round, and $1m bridge round",
-                "Executed business development strategy, built internal workflows, and developed a go-to-market plan",
-                "Conducted in-depth market research, analyzing retail equity investor behaviors and recommending business opportunities focused on Financial Advisors and Target-Date Funds"
-              ]}
-            />
-
-            <ExperienceItem
-              title="Business Development Manager"
-              company="Saudi Modern Factory"
-              companyUrl="https://smf.com.sa/"
-              location="Riyadh, Saudi Arabia"
-              jobSummary={`Achieved 124% of the annual sales target, generating over $1.6M in revenue,
-                 while securing 20+ new client accounts. Negotiated three
-                  partnerships worth $500K, including a dealership agreement with Haworth Saudi Arabia. 
-                  Developed marketing strategies for the company’s website, product catalogs,
-                   and specifications, boosting brand visibility.`}
-              date="Jun 2016 – Aug 2018"
-            />
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-semibold mb-2">Tech Stack</h2>
-          <Separator className="mb-4" />
-
-          <div className="space-y-4">
-            <TechItem
-              description={[
-                "Frontend: React, Zustand, Shadcn, Tailwind CSS, Vite, Framer Motion, ",
-                "Backend: Node.js, Express, Docker, Python, Zod",
-                "Full-Stack & Auth: Next.js, Clerk, Firebase",
-                "Scripting and Testing: Puppeteer, Storybook, Vitest",
-                "Databases: PostgreSQL, Prisma, Redis",
-                "APIs: RESTful, WebSockets, OpenAI, Anthropic, SendGrid, Stripe, Quickbooks",
-                "Deployment: Netlify, Vercel, AWS S3, AWS EC2",
-              ]}
-            />
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-semibold mb-2">Education</h2>
-          <Separator className="mb-4" />
-
-          <div className="space-y-2">
-            <EducationItem
-              degree="Master of Science in Finance"
-              school="Hult International Business School"
-              location="Boston, MA"
-              date="Mar 2020"
-              gpa="3.83/4.00"
-              honors="Dean's List"
-            />
-
-            <EducationItem
-              degree="Master of Science in International Business"
-              school="Hult International Business School"
-              location="Boston, MA"
-              date="Aug 2019"
-              gpa="3.5/4.00"
-            />
-
-            <EducationItem
-              degree="Bachelor of Science in Business Administration, Finance Major "
-              school="Alfaisal University"
-              location="Riyadh, Saudi Arabia"
-              date="Jan 2016"
-              gpa="3.83/4.00"
-              honors="Dean's List"
-            />
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-semibold mb-2">Additional Information</h2>
-          <Separator className="mb-4" />
-          <AdditionalInfoItem
-            certificates={[
-              'Passed CFA Level One Exam',
-              'Financial Modeling & Valuation Analyst (FMVA) from CFI'
-            ]}
-            languages={[
-              'English (Fluent)',
-              'Arabic (Native)'
-            ]}
-          />
-        </section>
-      </CardContent>
-    </Card>
+          </section>
+        </CardContent>
+      </Card>
+    </div>
   );
 };
-
-
-
-
-
-
