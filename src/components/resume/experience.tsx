@@ -20,9 +20,9 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
     <div>
         <div className="flex justify-between items-start mb-2">
             <div className="flex-1 pr-4">
-                <h3 className="font-semibold">
+                <h3 className="font-semibold text-sm">
                     {title} | {' '}
-                    <span className="font-normal">
+                    <span className="font-normal text-sm">
                         {companyUrl ? (
                             <a
                                 href={companyUrl}
@@ -36,19 +36,21 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
                             company
                         )}
                     </span> |{' '}
-                    <span className="font-normal">{location}</span>
+                    <span className="font-normal text-sm">{location}</span>
                 </h3>
             </div>
-            <span className="font-semibold shrink-0">
+            <span className="font-semibold shrink-0 text-sm">
                 {date}
             </span>
         </div>
         <p className="text-sm">
             {jobSummary}
         </p>
-        <ul className="list-disc list-inside mt-2">
+        <ul className="mt-2 space-y-2">
             {description?.map((item, index) => (
-                <li key={index} className="text-sm">{item}</li>
+                <li key={index} className="text-sm pl-4 relative before:content-['•'] before:absolute before:left-0">
+                    {item}
+                </li>
             ))}
         </ul>
     </div>

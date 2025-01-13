@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { Globe } from 'lucide-react';
 import { CardHeader, CardTitle } from "@/components/ui/card";
 
 interface ContactHeaderProps {
@@ -9,6 +10,7 @@ interface ContactHeaderProps {
     email: string;
     linkedinUrl: string;
     githubUrl: string;
+    personalWebsiteUrl?: string;
 }
 
 export const ContactHeader: React.FC<ContactHeaderProps> = ({
@@ -17,7 +19,8 @@ export const ContactHeader: React.FC<ContactHeaderProps> = ({
     phone,
     email,
     linkedinUrl,
-    githubUrl
+    githubUrl,
+    personalWebsiteUrl
 }) => (
     <CardHeader className="py-2">
         <CardTitle className="text-3xl font-bold">
@@ -49,7 +52,15 @@ export const ContactHeader: React.FC<ContactHeaderProps> = ({
                     height={36}
                     className="text-white"
                 />
-            </a>
+            </a> |
+            {personalWebsiteUrl && (
+                <a href={personalWebsiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-1 rounded hover:opacity-80 inline-flex items-center">
+                    <Globe className="w-5 h-5" />
+                </a>
+            )}
         </p>
     </CardHeader>
 ); 
