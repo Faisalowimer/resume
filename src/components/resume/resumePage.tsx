@@ -1,4 +1,4 @@
-import { TechItem } from './tech';
+//import { TechItem } from './tech';
 import { Separator } from "@/components/ui/separator";
 import { EducationItem } from './education';
 import { ContactHeader } from './contactHeader';
