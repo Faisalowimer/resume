@@ -1,13 +1,6 @@
-interface EducationItemProps {
-    degree: string;
-    school: string;
-    location: string;
-    date: string;
-    gpa?: string;
-    honors?: string;
-}
+import { EducationType } from '@/types/resume';
 
-export const EducationItem: React.FC<EducationItemProps> = ({
+export const EducationItem: React.FC<EducationType> = ({
     degree,
     school,
     location,

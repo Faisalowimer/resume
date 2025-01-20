@@ -1,14 +1,6 @@
-interface ExperienceItemProps {
-    title: string;
-    company: string;
-    companyUrl?: string;
-    location: string;
-    jobSummary: string;
-    date: string;
-    description?: string[];
-}
+import { ExperienceType } from '@/types/resume';
 
-export const ExperienceItem: React.FC<ExperienceItemProps> = ({
+export const ExperienceItem: React.FC<ExperienceType> = ({
     title,
     company,
     companyUrl,
