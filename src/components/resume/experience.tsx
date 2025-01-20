@@ -28,7 +28,7 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
                                 href={companyUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hover:underline"
+                                className="hover:underline print:text-inherit inline-flex items-baseline"
                             >
                                 {company}
                             </a>

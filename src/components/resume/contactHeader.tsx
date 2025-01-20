@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Globe } from 'lucide-react';
-import { CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface ContactHeaderProps {
     name: string;
@@ -22,45 +22,49 @@ export const ContactHeader: React.FC<ContactHeaderProps> = ({
     githubUrl,
     personalWebsiteUrl
 }) => (
-    <CardHeader className="py-2">
-        <CardTitle className="text-3xl font-bold">
+    <CardHeader className="p-0 pb-1">
+        <CardTitle className="text-3xl font-bold text-center">
             {name}
         </CardTitle>
-        <p className="text-muted-foreground flex items-center gap-1">
-            {location} | {phone} |
-            <a href={`mailto:${email}`} className="hover:underline">{email}</a> |
-            <a href={linkedinUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-1 rounded hover:opacity-80 inline-flex items-center">
-                <Image
-                    src="/icons8-linkedin.svg"
-                    alt="LinkedIn"
-                    width={24}
-                    height={24}
-                    className="text-white"
-                />
-            </a> |
-            <a href={githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-1 rounded hover:opacity-80 inline-flex items-center">
-                <Image
-                    src="/GitHub-Logo.wine.svg"
-                    alt="GitHub"
-                    width={36}
-                    height={36}
-                    className="text-white"
-                />
-            </a> |
-            {personalWebsiteUrl && (
-                <a href={personalWebsiteUrl}
+        <CardContent className="text-center mx-auto p-0">
+            <p className="text-muted-foreground flex items-center justify-center gap-1 text-sm">
+                {location} | <a href={`tel:${phone}`} className="hover:underline print:text-inherit">{phone}</a> |
+                <a href={`mailto:${email}`} className="hover:underline print:text-inherit">{email}</a> |
+                <a href={linkedinUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-1 rounded hover:opacity-80 inline-flex items-center">
-                    <Globe className="w-5 h-5" />
+                    className="hover:opacity-80 inline-flex items-center -mt-[2px]">
+                    <Image
+                        src="/icons8-linkedin.svg"
+                        alt="LinkedIn"
+                        width={18}
+                        height={18}
+                        className="text-white"
+                    />
+                </a> |
+                <a href={githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 inline-flex items-center -mt-[2px]">
+                    <Image
+                        src="/GitHub-Logo.wine.svg"
+                        alt="GitHub"
+                        width={30}
+                        height={30}
+                        className="text-white"
+                    />
                 </a>
-            )}
-        </p>
+                {personalWebsiteUrl && (
+                    <>
+                        | <a href={personalWebsiteUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:opacity-80 inline-flex items-center">
+                            <Globe className="w-4 h-4" />
+                        </a>
+                    </>
+                )}
+            </p>
+        </CardContent>
     </CardHeader>
 ); 
