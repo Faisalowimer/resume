@@ -1,5 +1,38 @@
 import { ResumeData } from "@/types/resume";
 
+function calculateDonationAmount(): string {
+    // Base amount from January 2024
+    const baseAmount = 18362;
+    const monthlyIncrease = 1000;
+
+    // Define the amounts for each month
+    const monthlyAmounts = {
+        '2024-01': baseAmount,                    // 18,362
+        '2024-02': baseAmount + monthlyIncrease,  // 19,362
+        '2024-03': baseAmount + monthlyIncrease * 2,  // 20,362
+        '2024-04': baseAmount + monthlyIncrease * 3,  // 21,362
+        '2024-05': baseAmount + monthlyIncrease * 4,  // 22,362
+        '2024-06': baseAmount + monthlyIncrease * 5,  // 23,362
+        '2024-07': baseAmount + monthlyIncrease * 6,  // 24,362
+        '2024-08': baseAmount + monthlyIncrease * 7,  // 25,362
+        '2024-09': baseAmount + monthlyIncrease * 8,  // 26,362
+        '2024-10': baseAmount + monthlyIncrease * 9,  // 27,362
+        '2024-11': baseAmount + monthlyIncrease * 10,  // 28,362
+        '2024-12': baseAmount + monthlyIncrease * 11,  // 29,362
+    };
+
+    // Get current month in YYYY-MM format
+    const currentDate = new Date();
+    const currentMonth = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}`;
+
+    // Get the amount for the current month, defaulting to January if not found
+    const amount = monthlyAmounts[currentMonth as keyof typeof monthlyAmounts] || baseAmount;
+
+    // Round to nearest thousand and format
+    const roundedThousands = Math.ceil(amount / 1000);
+    return `+${roundedThousands}k`;
+}
+
 export const resumeData: ResumeData = {
     contact: {
         name: "Faisal Owimer",
@@ -16,7 +49,7 @@ export const resumeData: ResumeData = {
             company: "Ihsan Tech, Inc.",
             companyUrl: "https://www.ihsan.tech",
             location: "Manhattan, NY",
-            jobSummary: "Founded a platform connecting Muslim communities with mosques, processing +$19k in donations, supporting community fundraising, events, and streamlining back-office management.",
+            jobSummary: `Founded a platform connecting Muslim communities with mosques, processing ${calculateDonationAmount()} in donations, supporting community fundraising, events, and streamlining back-office management.`,
             date: "Nov 2024 – Present",
             description: [
                 "Designed and implemented responsive, feature-rich frontend using Next.js, ClerkAuth, React, Zustand, Shadcn, TailwindCSS, and Framer Motion, ensuring seamless user interface and experience",
