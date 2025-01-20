@@ -2,18 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import { Globe } from 'lucide-react';
 import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ContactInfo } from '@/types/resume';
 
-interface ContactHeaderProps {
-    name: string;
-    location: string;
-    phone: string;
-    email: string;
-    linkedinUrl: string;
-    githubUrl: string;
-    personalWebsiteUrl?: string;
-}
-
-export const ContactHeader: React.FC<ContactHeaderProps> = ({
+export const ContactHeader: React.FC<ContactInfo> = ({
     name,
     location,
     phone,
