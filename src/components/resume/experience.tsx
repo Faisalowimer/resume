@@ -10,7 +10,7 @@ export const ExperienceItem: React.FC<ExperienceType> = ({
     description
 }) => (
     <div>
-        <div className="flex justify-between items-start mb-2">
+        <div className="flex flex-col sm:flex-row justify-between items-start mb-2">
             <div className="flex-1 pr-4">
                 <h3 className="font-semibold text-sm">
                     {title} | {' '}
