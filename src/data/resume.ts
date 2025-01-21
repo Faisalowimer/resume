@@ -41,7 +41,7 @@ export const resumeData: ResumeData = {
         email: "faisal@owimer.co",
         linkedinUrl: "https://www.linkedin.com/in/faisal-owimer/",
         githubUrl: "https://github.com/Faisalowimer",
-        // personalWebsiteUrl: "https://owimer.co"
+        personalWebsiteUrl: "https://owimer.co"
     },
     experience: [
         {
