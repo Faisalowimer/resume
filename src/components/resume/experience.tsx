@@ -20,7 +20,7 @@ export const ExperienceItem: React.FC<ExperienceType> = ({
                                 href={companyUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hover:underline print:text-inherit inline-flex items-baseline"
+                                className="hover:underline print:text-inherit inline-flex items-baseline text-blue-500 underline"
                             >
                                 {company}
                             </a>
