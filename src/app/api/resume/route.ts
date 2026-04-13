@@ -24,9 +24,10 @@ export async function OPTIONS(request: NextRequest) {
 export async function GET(request: NextRequest) {
     const origin = request.headers.get('origin');
 
-    // Strip personal contact details from the public API response
+    // Strip personal contact details (phone, email) from the public API response
     const { contact, ...publicData } = resumeData;
-    const { phone: _phone, email: _email, ...publicContact } = contact;
+    const { name, location, linkedinUrl, githubUrl, personalWebsiteUrl } = contact;
+    const publicContact = { name, location, linkedinUrl, githubUrl, personalWebsiteUrl };
 
     return NextResponse.json(
         { contact: publicContact, ...publicData },
