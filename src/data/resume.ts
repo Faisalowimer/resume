@@ -35,13 +35,14 @@ export const resumeData: ResumeData = {
             company: "Goodie AI",
             companyUrl: "https://www.higoodie.com/",
             location: "Manhattan, NY",
-            jobSummary: "Leading product and engineering team to build the future of AI search.",
+            jobSummary: "Leading product engineering across a 12-person team and 3 squads, driving user growth, retention, and platform observability for an AI-powered search and shopping solution serving Fortune 500 brands.",
             date: "Feb 2025 – Present",
             description: [
-                "Spearheading a full webapp rebrand, collaborating with design to deliver intuitive, high-performance interfaces and ship new features that improve UX and market positioning",
-                "Led SOC 2 Type 1 & Type 2 certifications and optimized team workflows by introducing Linear for project management and enhancing CI/CD pipeline efficiency",
-                "Partnered with clients to incorporate feedback into product workflows, iterating quickly to validate assumptions and driving revenue to $50K+ MRR",
-                "Redesigned component library in React/TypeScript and built Goodie admin portal, delivering scalable, reusable components that doubled development velocity and accelerated feature delivery.",
+                "Modernized the full-stack codebase and resolved critical tech debt, significantly improving shipping velocity and enabling the team to scale feature delivery across 3 concurrent squads",
+                "Delivered prompt engine, research, shopping, onboarding, admin portal, and email service from prototype to production, achieving competitive feature parity and winning accounts including Uniqlo, Sargento, SteelSeries, Kiehl's, and Dermalogica",
+                "Led SOC 2 Type 1 & Type 2 certifications and enterprise feature rollout, directly enabling six-figure deals and positioning the company toward seven-figure ARR",
+                "Spearheading brand, website, and web app redesign — brand and site live, app launching end of month — improving UX and simplifying data presentation across the platform",
+                "Migrated the eng org from ClickUp to Linear with full workflow setup; deployed Claude Code agents to automate spec drafting, PRD creation, and release documentation, compressing planning-to-shipping cycles",
             ]
 
 
