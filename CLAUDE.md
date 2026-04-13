@@ -53,6 +53,17 @@ Commented out (available to re-enable): `tech.tsx`, `addtionalInfo.tsx`
 - Reference Linear ID in commit footer: `Refs: OWIMER-N`
 - PR: `develop` → `main`
 
+## API Security
+
+The `/api/resume` endpoint has CORS restrictions — only the following origins are allowed:
+- `https://owimer.co`
+- `https://www.owimer.co`
+- `https://resume.owimer.co`
+
+Phone and email are **stripped** from the API response to prevent contact scraping. They are only visible on the rendered site.
+
+To add an allowed origin, update `ALLOWED_ORIGINS` in `src/app/api/resume/route.ts`.
+
 ## Linear Project
 
 Team: Owimer | Project: Resume — resume.owimer.co
