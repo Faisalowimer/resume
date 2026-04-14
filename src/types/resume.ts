@@ -27,8 +27,20 @@ export interface EducationType {
     honors?: string;
 }
 
+export interface ProjectItemType {
+    name: string;
+    url?: string;
+    description: string;
+}
+
+export interface ProjectsSectionType {
+    summary: string;
+    items: ProjectItemType[];
+}
+
 export interface ResumeData {
     contact: ContactInfo;
     experience: ExperienceType[];
+    projects: ProjectsSectionType;
     education: EducationType[];
 } 

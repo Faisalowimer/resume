@@ -1,13 +1,12 @@
 'use client';
 
-//import { TechItem } from './tech';
 import { Separator } from "@/components/ui/separator";
 import { resumeData } from '@/data/resume';
 import { EducationItem } from './education';
 import { ContactHeader } from './contactHeader';
 import { ExperienceItem } from './experience';
+import { ProjectsSection } from './projects';
 import { Card, CardContent } from "@/components/ui/card";
-//import { AdditionalInfoItem } from './addtionalInfo';
 import React from 'react';
 import '@/styles/print.css';
 
@@ -29,6 +28,12 @@ export function ResumePage() {
                   <ExperienceItem key={index} {...exp} />
                 ))}
               </div>
+            </section>
+
+            <section>
+              <h2 className="text-base font-semibold mb-1">Projects</h2>
+              <Separator className="mb-2 print:border-t-[1.5px] print:border-black" />
+              <ProjectsSection {...resumeData.projects} />
             </section>
 
             <section>

@@ -47,18 +47,6 @@ export const resumeData: ResumeData = {
 
 
         },
-        {
-            title: "Founder",
-            company: "Ihsan Tech, Inc.",
-            companyUrl: "https://www.ihsan.tech",
-            location: "Manhattan, NY",
-            jobSummary: `Founded a platform connecting Muslim communities with mosques, processing ${calculateDonationAmount()} in donations, supporting community fundraising, events, and streamlining back-office operations.`,
-            date: "Nov 2024 – Present",
-            description: [
-                "Designed and implemented responsive, feature-rich frontend using Next.js, ClerkAuth, React, Zustand, Shadcn, TailwindCSS, and Framer Motion, ensuring seamless user interface and experience",
-                "Built scalable backend and database infrastructure using Docker, Redis caching, and Prisma ORM, with comprehensive RESTful API integrations (Stripe, Clerk, SendGrid, Resend, QuickBooks)",
-            ]
-        },
         // {
         //     title: "Software Engineer",
         //     company: "Fractal Tech",
@@ -98,6 +86,26 @@ export const resumeData: ResumeData = {
         //     ]
         // }
     ],
+    projects: {
+        summary: "Building an autonomous development system using Claude Code, AI agents, and MCP tooling to independently manage and ship side projects — with a longer-term focus on deepening expertise in agentic workflows and AI-native development.",
+        items: [
+            {
+                name: "faisal-infra",
+                url: "https://github.com/Faisalowimer/faisal-infra",
+                description: "Shared infrastructure repo with reusable CI/CD workflows, coding conventions, and Claude Code skills across all active ventures",
+            },
+            {
+                name: "Ihsan",
+                url: "https://www.ihsan.tech",
+                description: `Full-stack community platform (Next.js, Stripe, Clerk) connecting Muslim communities with mosques, processing ${calculateDonationAmount()} in donations`,
+            },
+            {
+                name: "owimer.co",
+                url: "https://owimer.co",
+                description: "Personal website built with a Windows 95/98 aesthetic; roadmap focused on agentic features and interactive experiments",
+            },
+        ]
+    },
     education: [
         {
             degree: "Full Stack Development Bootcamp",
