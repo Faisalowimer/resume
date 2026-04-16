@@ -18,7 +18,7 @@ export const ProjectsSection: React.FC<ProjectsSectionType> = ({ summary, items 
                     ) : (
                         <span className="font-semibold">{item.name}</span>
                     )}
-                    {' — '}{item.description}
+                    {': '}{item.description}
                 </div>
             ))}
         </div>

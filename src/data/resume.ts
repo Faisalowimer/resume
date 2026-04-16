@@ -35,14 +35,14 @@ export const resumeData: ResumeData = {
             company: "Goodie AI",
             companyUrl: "https://www.higoodie.com/",
             location: "Manhattan, NY",
-            jobSummary: "Leading product engineering across a 12-person team and 3 squads, driving user growth, retention, and platform observability for an AI-powered search and shopping solution serving Fortune 500 brands.",
+            jobSummary: "Leading product engineering across a 12-person team at an AEO and AI search platform, driving feature delivery, user growth, and platform reliability for Fortune 500 brands.",
             date: "Feb 2025 – Present",
             description: [
-                "Modernized the full-stack codebase and resolved critical tech debt, significantly improving shipping velocity and enabling the team to scale feature delivery across 3 concurrent squads",
-                "Delivered prompt engine, research, shopping, onboarding, admin portal, and email service from prototype to production, achieving competitive feature parity and winning accounts including Uniqlo, Sargento, SteelSeries, Kiehl's, and Dermalogica",
-                "Led SOC 2 Type 1 & Type 2 certifications and enterprise feature rollout, directly enabling six-figure deals and positioning the company toward seven-figure ARR",
-                "Spearheading brand, website, and web app redesign — brand and site live, app launching end of month — improving UX and simplifying data presentation across the platform",
-                "Migrated the eng org from ClickUp to Linear with full workflow setup; deployed Claude Code agents to automate spec drafting, PRD creation, and release documentation, compressing planning-to-shipping cycles",
+                "Leading brand, website, and web app redesign to modernize UX and reposition Goodie as the leading brand in the AEO space",
+                "Shipped core platform features from prototype to production including admin portal and email service, achieving feature parity with competitors and landing accounts including Uniqlo, Sargento, SteelSeries, Kiehl's, and Dermalogica",
+                "Led SOC 2 Type 1 & Type 2 certifications and enterprise feature rollout, directly unlocking six-figure deals and driving enterprise growth",
+                "Modernized the full-stack codebase and resolved critical tech debt, doubling time-to-ship and enabling the team to scale feature delivery across 3 concurrent squads",
+                "Migrated the team from ClickUp to Linear and deployed Claude Code agents to automate spec drafting and release documentation, compressing planning cycles and improving cross-squad coordination",
             ]
 
 
@@ -64,12 +64,11 @@ export const resumeData: ResumeData = {
             company: "Adaptive Investment Solutions",
             companyUrl: "https://adaptive-investments.com/app/home",
             location: "Manhattan, NY",
-            jobSummary: "Led product management and business development efforts to raise seed round.",
+            jobSummary: "Owned product at a seed-stage fintech, taking it from first users to $170M AUM and $1.75M raised in seed funding.",
             date: "Jun 2020 – May 2024",
             description: [
-                "Spearheaded product discovery and pilot user onboarding, increasing user traction and identifying product-market fit",
-                "Participated in raising $750K in pre-seed and $1M in bridge funding, collaborating with founders on investor pitches",
-                "Developed go-to-market strategy and internal workflows to streamline business operations and product launch",
+                "Ran end-to-end product discovery including user interviews, roadmap prioritization, and pilot onboarding, validating early product-market fit",
+                "Owned investor materials, GTM strategy, and internal ops throughout the seed round",
             ]
         },
         // {
@@ -87,12 +86,11 @@ export const resumeData: ResumeData = {
         // }
     ],
     projects: {
-        summary: "Building an autonomous development system using Claude Code, AI agents, and MCP tooling to independently manage and ship side projects — with a longer-term focus on deepening expertise in agentic workflows and AI-native development.",
+        summary: "Building a personal development system with Claude Code, AI agents, MCP tooling, and CLI tools to manage and ship projects through agentic workflows and AI-native development.",
         items: [
             {
                 name: "faisal-infra",
-                url: "https://github.com/Faisalowimer/faisal-infra",
-                description: "Shared infrastructure repo with reusable CI/CD workflows, coding conventions, and Claude Code skills across all active ventures",
+                description: "Shared infrastructure repo with reusable CI/CD workflows, coding conventions, and Claude Code skills across all active projects",
             },
             {
                 name: "Ihsan",
@@ -102,36 +100,31 @@ export const resumeData: ResumeData = {
             {
                 name: "owimer.co",
                 url: "https://owimer.co",
-                description: "Personal website built with a Windows 95/98 aesthetic; roadmap focused on agentic features and interactive experiments",
+                description: "Personal website built with a Windows 95/98 aesthetic, with a roadmap including games, a terminal, and agentic features",
             },
         ]
     },
+    techStack: [
+        "TypeScript", "Next.js", "React", "Node.js", "Tailwind CSS", "PostgreSQL", "Prisma", "REST APIs", "Docker", "AWS", "Python"
+    ],
     education: [
         {
-            degree: "Full Stack Development Bootcamp",
+            degrees: [{ name: "Full Stack Development Bootcamp", date: "Dec 2024" }],
             school: "Fractal Tech",
             location: "Brooklyn, NY",
-            date: "Dec 2024"
         },
         {
-            degree: "Master of Science in Finance",
+            degrees: [
+                { name: "Master of Science in Finance", date: "Mar 2020", honors: "Dean's List" },
+                { name: "Master of Science in International Business", date: "Aug 2019" },
+            ],
             school: "Hult International Business School",
             location: "Boston, MA",
-            date: "Mar 2020",
-            honors: "Dean's List"
         },
         {
-            degree: "Master of Science in International Business",
-            school: "Hult International Business School",
-            location: "Boston, MA",
-            date: "Aug 2019"
-        },
-        {
-            degree: "Bachelor of Science in Business Administration, Finance Major",
+            degrees: [{ name: "Bachelor of Science in Business Administration, Finance Major", date: "Jan 2016", honors: "Dean's List" }],
             school: "Alfaisal University",
             location: "Riyadh, Saudi Arabia",
-            date: "Jan 2016",
-            honors: "Dean's List"
         }
     ]
 }; 

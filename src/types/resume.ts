@@ -18,13 +18,17 @@ export interface ExperienceType {
     description: string[];
 }
 
+export interface DegreeType {
+    name: string;
+    date: string;
+    honors?: string;
+    gpa?: string;
+}
+
 export interface EducationType {
-    degree: string;
+    degrees: DegreeType[];
     school: string;
     location: string;
-    date: string;
-    gpa?: string;
-    honors?: string;
 }
 
 export interface ProjectItemType {
@@ -42,5 +46,6 @@ export interface ResumeData {
     contact: ContactInfo;
     experience: ExperienceType[];
     projects: ProjectsSectionType;
+    techStack: string[];
     education: EducationType[];
 } 

@@ -18,12 +18,12 @@ export function ResumePage() {
         <div className="p-3 md:p-[0.35in] print:p-[0.35in]">
           <ContactHeader {...resumeData.contact} />
 
-          <CardContent className="mt-1 space-y-4 print:space-y-2 print:text-[10.5pt] px-0">
+          <CardContent className="mt-1 space-y-4 print:space-y-1 print:text-[10.5pt] px-0">
             <section>
               <h2 className="text-base font-semibold mb-1 text-primary">Experience</h2>
               <Separator className="mb-2 print:border-t-[1.5px] print:border-black" />
 
-              <div className="space-y-4 print:space-y-4">
+              <div className="space-y-4 print:space-y-3">
                 {resumeData.experience.map((exp, index) => (
                   <ExperienceItem key={index} {...exp} />
                 ))}
@@ -34,13 +34,16 @@ export function ResumePage() {
               <h2 className="text-base font-semibold mb-1">Projects</h2>
               <Separator className="mb-2 print:border-t-[1.5px] print:border-black" />
               <ProjectsSection {...resumeData.projects} />
+              <div className="text-sm pl-4 relative before:content-['•'] before:absolute before:left-0 mt-1">
+                <span className="font-semibold">Stack:</span>{' '}{resumeData.techStack.join(', ')}
+              </div>
             </section>
 
             <section>
               <h2 className="text-base font-semibold mb-1">Education</h2>
               <Separator className="mb-2 print:border-t-[1.5px] print:border-black" />
 
-              <div className="space-y-1 print:space-y-2">
+              <div className="space-y-1 print:space-y-1">
                 {resumeData.education.map((edu, index) => (
                   <EducationItem key={index} {...edu} />
                 ))}

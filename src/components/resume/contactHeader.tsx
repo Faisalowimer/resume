@@ -18,7 +18,7 @@ export const ContactHeader: React.FC<ContactInfo> = ({
             {name}
         </CardTitle>
         <CardContent className="text-center mx-auto p-0">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-1">
+            <div className="flex flex-col md:flex-row print:flex-row items-center justify-center gap-1">
                 <p className="text-muted-foreground flex items-center justify-center gap-1 text-sm">
                     {location} | <a href={`tel:${phone}`} className="hover:underline print:text-inherit">{phone}</a> |
                     <a href={`mailto:${email}`} className="hover:underline print:text-inherit">{email}</a>
