@@ -10,7 +10,7 @@ export const ExperienceItem: React.FC<ExperienceType> = ({
     description
 }) => (
     <div>
-        <div className="flex flex-col sm:flex-row justify-between items-start mb-2">
+        <div className="flex flex-col sm:flex-row justify-between items-start mb-2 print:mb-0.5">
             <div className="flex-1 pr-4">
                 <h3 className="font-semibold text-sm">
                     {title} | {' '}
@@ -38,7 +38,7 @@ export const ExperienceItem: React.FC<ExperienceType> = ({
         <p className="text-sm">
             {jobSummary}
         </p>
-        <ul className="mt-2 space-y-2">
+        <ul className="mt-2 space-y-2 print:mt-0.5 print:space-y-0.5">
             {description?.map((item, index) => (
                 <li key={index} className="text-sm pl-4 relative before:content-['•'] before:absolute before:left-0">
                     {item}
