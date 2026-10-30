@@ -31,18 +31,18 @@ export const resumeData: ResumeData = {
     },
     experience: [
         {
-            title: "Product Engineer",
+            title: "Lead Product Manager",
             company: "Goodie AI",
             companyUrl: "https://www.higoodie.com/",
             location: "Manhattan, NY",
-            jobSummary: "Leading product engineering across a 12-person team at an AEO and AI search platform, driving feature delivery, user growth, and platform reliability for Fortune 500 brands.",
+            jobSummary: "Building the future of AI search: own product with a team of 12 engineers, shipping weekly to help brands like Unilever, Uniqlo, and SteelSeries win in AI answers.",
             date: "Feb 2025 – Present",
             description: [
-                "Leading brand, website, and web app redesign to modernize UX and reposition Goodie as the leading brand in the AEO space",
-                "Shipped core platform features from prototype to production including admin portal and email service, achieving feature parity with competitors and landing accounts including Uniqlo, Sargento, SteelSeries, Kiehl's, and Dermalogica",
-                "Led SOC 2 Type 1 & Type 2 certifications and enterprise feature rollout, directly unlocking six-figure deals and driving enterprise growth",
-                "Modernized the full-stack codebase and resolved critical tech debt, doubling time-to-ship and enabling the team to scale feature delivery across 3 concurrent squads",
-                "Migrated the team from ClickUp to Linear and deployed Claude Code agents to automate spec drafting and release documentation, compressing planning cycles and improving cross-squad coordination",
+                "Scaled ARR 30x+ by owning every launch from customer discovery to release",
+                "Rebuilt how the team ships using Claude Code agents for specs, prototypes, and engineering, sustaining a weekly cadence",
+                "Moved Goodie from monitoring to action with 2.0: full redesign, Goodie Agent, MCP, Brand Command, and Revenue Attribution",
+                "Expanded into AI shopping and social citations, taking Agentic Commerce and Social Optimization from 0 to 1",
+                "Unlocked six-figure deals by leading SOC 2 Type 1 & 2 and SSO rollouts",
             ]
 
 
