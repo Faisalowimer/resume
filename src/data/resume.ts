@@ -38,7 +38,7 @@ export const resumeData: ResumeData = {
             jobSummary: "Building the future of AI search: own product with a team of 12 engineers, shipping weekly to help brands like Unilever, Uniqlo, and SteelSeries win in AI answers.",
             date: "Feb 2025 – Present",
             description: [
-                "Scaled ARR 30x+ by owning every launch from customer discovery to release",
+                "Scaled ARR +30x by owning every launch from customer discovery to release",
                 "Rebuilt how the team ships using Claude Code agents for specs, prototypes, and engineering",
                 "Moved Goodie from monitoring to action with 2.0: full redesign, Goodie Agent, MCP, Brand Command, and Attribution",
                 "Expanded into AI shopping and social citations, taking Agentic Commerce and Social Optimization from 0 to 1",
