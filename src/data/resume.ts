@@ -39,8 +39,8 @@ export const resumeData: ResumeData = {
             date: "Feb 2025 – Present",
             description: [
                 "Scaled ARR 30x+ by owning every launch from customer discovery to release",
-                "Rebuilt how the team ships using Claude Code agents for specs, prototypes, and engineering, sustaining a weekly cadence",
-                "Moved Goodie from monitoring to action with 2.0: full redesign, Goodie Agent, MCP, Brand Command, and Revenue Attribution",
+                "Rebuilt how the team ships using Claude Code agents for specs, prototypes, and engineering",
+                "Moved Goodie from monitoring to action with 2.0: full redesign, Goodie Agent, MCP, Brand Command, and Attribution",
                 "Expanded into AI shopping and social citations, taking Agentic Commerce and Social Optimization from 0 to 1",
                 "Unlocked six-figure deals by leading SOC 2 Type 1 & 2 and SSO rollouts",
             ]
